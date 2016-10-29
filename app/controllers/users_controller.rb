@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     #                  password_confirmation: "bar")
     
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to user_url(@user)
     else
