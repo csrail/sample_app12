@@ -16,7 +16,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       #assert_equal before_count, after_count
     
     assert_template 'users/new'
-    assert_select 'form[action="/signup"]'
+    assert_select 'form[action="/users"]'
     assert_select 'div#error_explanation'
     assert_select 'div.field_with_errors', 4*2
   end
